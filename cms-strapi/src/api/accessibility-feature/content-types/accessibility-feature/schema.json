@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_features",
+  "info": {
+    "singularName": "accessibility-feature",
+    "pluralName": "accessibility-features",
+    "displayName": "AccessibilityFeature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Icon_MEDIA": {
+      "type": "component",
+      "repeatable": true,
+      "component": "icon-media.icon-media"
+    },
+    "accessibility_needs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessibility-need.accessibility-need",
+      "mappedBy": "accessibility_features"
+    }
+  }
+}

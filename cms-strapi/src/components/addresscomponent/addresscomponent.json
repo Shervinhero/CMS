@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_addresscomponent_addresscomponents",
+  "info": {
+    "displayName": "Addresscomponent",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "street": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    }
+  }
+}

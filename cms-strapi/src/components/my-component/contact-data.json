@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_my_component_contact_data",
+  "info": {
+    "displayName": "Contact Data",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "LastName": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "EmailAddress": {
+      "type": "email"
+    },
+    "FirstName": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "addresscomponent.addresscomponent"
+    }
+  }
+}

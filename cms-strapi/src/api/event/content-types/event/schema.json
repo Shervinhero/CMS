@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "inversedBy": "events"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "startTime": {
+      "type": "datetime"
+    },
+    "MaxCap": {
+      "type": "biginteger"
+    },
+    "Tags": {
+      "type": "text"
+    },
+    "EndTime": {
+      "type": "datetime"
+    },
+    "Website": {
+      "type": "string"
+    },
+    "seatMap": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "eventType": {
+      "type": "enumeration",
+      "enum": [
+        "concert",
+        "theater",
+        "exhibition"
+      ]
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "Ex:",
+        "German",
+        "English"
+      ]
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "event"
+    },
+    "organizer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::organizer.organizer"
+    },
+    "tickets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ticket.ticket",
+      "mappedBy": "event"
+    },
+    "accessibility_needs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessibility-need.accessibility-need",
+      "inversedBy": "events"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "events": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "mappedBy": "locations"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Location": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Capacity": {
+      "type": "biginteger"
+    },
+    "Size": {
+      "type": "decimal"
+    },
+    "Website": {
+      "type": "string"
+    },
+    "Contact": {
+      "displayName": "Contact Data",
+      "type": "component",
+      "repeatable": false,
+      "component": "my-component.contact-data"
+    },
+    "OpeningHour": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hour.openinghour"
+    },
+    "Addreess": {
+      "type": "component",
+      "repeatable": false,
+      "component": "addresscomponent.addresscomponent"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "location"
+    }
+  }
+}

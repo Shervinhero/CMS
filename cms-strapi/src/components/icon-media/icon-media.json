@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_icon_media_icon_medias",
+  "info": {
+    "displayName": "Icon_Media",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

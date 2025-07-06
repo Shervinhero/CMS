@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_price_details_price_details",
+  "info": {
+    "displayName": "PriceDetails",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "base_price": {
+      "type": "decimal"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "final_price": {
+      "type": "decimal"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "currency:",
+        "Euro",
+        "Dollar"
+      ]
+    },
+    "Reason": {
+      "type": "string"
+    }
+  }
+}

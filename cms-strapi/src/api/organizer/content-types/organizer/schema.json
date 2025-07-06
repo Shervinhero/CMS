@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizers",
+  "info": {
+    "singularName": "organizer",
+    "pluralName": "organizers",
+    "displayName": "Organizer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Type": {
+      "type": "text"
+    },
+    "Website": {
+      "type": "text"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Contact_Mail": {
+      "type": "email"
+    },
+    "Contact_Phone": {
+      "type": "text"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Address_Organizer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "addresscomponent.addresscomponent"
+    },
+    "Contact_Organizer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "my-component.contact-data"
+    }
+  }
+}

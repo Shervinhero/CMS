@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_refund_policy_block_refund_policy_blocks",
+  "info": {
+    "displayName": "RefundPolicyBlock",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "RefundPolicyBlock": {
+      "type": "richtext"
+    }
+  }
+}
