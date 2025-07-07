@@ -198,8 +198,5 @@ User Logout: Users can log out of their accounts.
 
 Ticket List Display: The page showing a list of tickets is working.
 
-Article List Display: If you have articles, the page displaying them is working.
 
-Article Form: You can add new articles.
-
-Organizer Details Display: When you click on an organizer's name from an event (once the event details page is working), their details page should display.
+****Organizer Details Display: When you click on an organizer's name from an event (once the event details page is working), their details page should display.
