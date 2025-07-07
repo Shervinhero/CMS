@@ -12,7 +12,7 @@ i18n
             en: {
                 translation: enTranslation,
             },
-            de: {
+            fa: {
                 translation: faTranslation,
             },
         },
