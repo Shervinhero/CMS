@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom'; // Import Link
 import { fetchEventById } from '../api';
 import { useTranslation } from 'react-i18next';
 
-
 const EventDetails = () => {
-    const { id } = useParams();
-    const navigate = useNavigate();
+    const { id } = useParams(); // Get the event ID from the URL
+    const navigate = useNavigate(); // Initialize useNavigate hook
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { t } = useTranslation();
 
     useEffect(() => {
-
+        // Log the ID received from the URL
         console.log('Event ID from URL (useParams):', id);
 
         const getEvent = async () => {
             try {
                 const data = await fetchEventById(id);
-
+                // Add a console log here to see what data is received for a single event
                 console.log('Fetched single event data:', data);
                 if (data) {
                     setEvent(data);
@@ -40,16 +39,16 @@ const EventDetails = () => {
             setError(t('noEventFound'));
             setLoading(false);
         }
-    }, [id, t]);
+    }, [id, t]); // Re-fetch if ID changes or translation changes
 
     if (loading) return <div className="text-center p-4 text-gray-700 dark:text-gray-300">Loading event details...</div>;
     if (error) return <div className="text-center p-4 text-red-500">Error: {error}</div>;
     if (!event) return <div className="text-center p-4 text-gray-600 dark:text-gray-400">{t('noEventFound')}</div>;
 
     return (
-
+        // Enhanced container styling with gradient, larger shadow, and rounded corners
         <div className="container mx-auto p-6 md:p-8 max-w-4xl bg-gradient-to-br from-indigo-50 dark:from-gray-900 to-white dark:to-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-indigo-100 dark:border-gray-700">
-            <button
+            <button // Styled button with enhanced hover and focus effects
                 onClick={() => navigate('/')}
                 className="mb-8 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:-translate-y-1"
             >
